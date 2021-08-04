@@ -33,4 +33,17 @@ Chrome Devtool > Network > Doc > www.instagram.com > Headers \
 **Filtering on Wireshark**\
 `ip.addr == 157.240.8.174`
 
+### 8. TCP/IP stack by example
+
+1. Click one of the packets
+   1. Layer1 > TCP (Transmission Control Protocol)
+      - Source Port : 61934 (Randomly chosen on my local)
+      - Destination Port : 443
+      - Flags: 0x002 (SYN) -> Flags: 0x012 (SYN, ACK) -> Flags: 0x010 (ACK)
+   2. Layer2 > IP (Internet Protocal Version 4) : It has IP information
+      - Source Address: 192.168.8.113
+      - Destination Address: 157.240.8.174
+   3. Ethernet II () : Hardware; my macaddress to destination router/network device
+   4. Data (Frame 75) : Actual data
+
 </details>
