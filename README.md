@@ -54,4 +54,11 @@ TLS : Transport Layer Security
 
 - TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
 
+### 13. Symmetric Key Encryption Algorithms
+
+AES (Advanced Encryption Standard) : Symmetric
+RSA (Rivest–Shamir–Adleman) : Asymmetric
+
+DES, 3DES : Obsolete
+
 </details>
