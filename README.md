@@ -2,6 +2,8 @@
 
 SSL Complete Guide 2021: HTTP to HTTPS by Bogdan Stashchuk by Bogdan Stashchuk
 
+SSL : Secure Sockets Layer
+
 ## details
 
 <details>
@@ -45,5 +47,11 @@ Chrome Devtool > Network > Doc > www.instagram.com > Headers \
       - Destination Address: 157.240.8.174
    3. Ethernet II () : Hardware; my macaddress to destination router/network device
    4. Data (Frame 75) : Actual data
+
+### 10. Analyzing HTTPS and TLS using Wireshark
+
+TLS : Transport Layer Security
+
+- TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
 
 </details>
