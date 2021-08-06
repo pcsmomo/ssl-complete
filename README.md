@@ -72,4 +72,26 @@ Bashing Algorithms
   - SHA-512 : 512 bit
 - HMAC (keyed-hash message authentication code) : Can be used with MD5 and SHA
 
+### 15. MD5 hashing algorithm
+
+```sh
+touch file.txt
+md5 file.txt
+# MD5 (file.txt) = d41d8cd98f00b204e9800998ecf8427e
+
+# Add "Hello world" in the file.txt
+open file.txt
+md5 file.txt
+# MD5 (file.txt) = 3e25960a79dbc69b674cd4ec67a72c62
+
+# Hashed result is totally differents
+```
+
+[MD5 Hash Generator](https://www.md5hashgenerator.com/)
+
+Generate Hash with text "Hello world" \
+-> 3e25960a79dbc69b674cd4ec67a72c62 (Exactly same)
+
+> It generated based on content
+
 </details>
