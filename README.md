@@ -135,4 +135,84 @@ Key length
 
 private key and public key have the same length
 
+### 25. Using OpenSSL for RSA keys generation
+
+```sh
+openssl
+
+# Generate without encryption
+OpenSSL> genrsa
+# Generating RSA private key, 2048 bit long modulus
+# .+++
+# ..................................+++
+# e is 65537 (0x10001)
+# -----BEGIN RSA PRIVATE KEY-----
+# MIIEowIBAAKCAQEAu8YXs5gvZwU763KHRUFeqlwPy9kYCemmKWs3dOV78t9sr0oh
+# ...
+# X1IrZoHJ4fnfZ3WmvpyK84Rt7+lvdBuqUPm0f9aAa+QAWOdMmZjh
+# -----END RSA PRIVATE KEY-----
+```
+
+```sh
+# Encrypt with AES-256
+OpenSSL> genrsa -aes256
+# Generating RSA private key, 2048 bit long modulus
+# .....................................+++
+# .............................................+++
+# e is 65537 (0x10001)
+# Enter pass phrase:
+# Verifying - Enter pass phrase:
+# -----BEGIN RSA PRIVATE KEY-----
+# Proc-Type: 4,ENCRYPTED
+# DEK-Info: AES-256-CBC,A1C663E683A49971C8A0C74FBD0BCF7B
+#
+# rvFOhjonpUReerrHK21PIyHThb762DtXMfWtx1FixJTYWjvZNcfhefcdli+25L+9
+# ...
+# 6f0YS3Dhj4HlYfxB2L7dMKwX97mxdWZhj+HgZhF3dngvriO0amlGHLu+7kfGSLFI
+# -----END RSA PRIVATE KEY-----
+```
+
+```sh
+# Encrypt with DES3
+OpenSSL> genrsa -des3
+# Generating RSA private key, 2048 bit long modulus
+# ......................................................................+++
+# ...............+++
+# e is 65537 (0x10001)
+# Enter pass phrase:
+# Verifying - Enter pass phrase:
+# -----BEGIN RSA PRIVATE KEY-----
+# Proc-Type: 4,ENCRYPTED
+# DEK-Info: DES-EDE3-CBC,5988E5B918179DC7
+# -----END RSA PRIVATE KEY-----
+```
+
+```sh
+# Save rsa to the file, private.pem
+OpenSSL> genrsa -aes256 -out private.pem
+# Generating RSA private key, 2048 bit long modulus
+# .................+++
+# .............................................................................................+++
+# e is 65537 (0x10001)
+# Enter pass phrase for private.pem:
+# Verifying - Enter pass phrase for private.pem:
+```
+
+```sh
+# The public key is encoded in the private key.
+# Extract the public key from private.pem out to public.pem
+OpenSSL> rsa -in private.pem -outform PEM -pubout -out public.pem
+# Generating RSA private key, 2048 bit long modulus
+# .................+++
+# .............................................................................................+++
+# e is 65537 (0x10001)
+# Enter pass phrase for private.pem:
+# Verifying - Enter pass phrase for private.pem:
+```
+
+```sh
+# Generate RSA key length 4096
+genrsa 4096
+```
+
 </details>
