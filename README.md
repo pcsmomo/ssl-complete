@@ -63,7 +63,7 @@ DES, 3DES : Obsolete
 
 ### 14. Hashing Overview
 
-Bashing Algorithms
+Bashing Algorithms : One way, cannot decrypt from hashed result
 
 - MD5 (message-digest) : 128 bit
 - SHA (Secure Hash Algorithm)
@@ -75,6 +75,7 @@ Bashing Algorithms
 ### 15. MD5 hashing algorithm
 
 ```sh
+# MD5 : 126 bit = 4 bit(16, hexadecimal) * 32 characters
 touch file.txt
 md5 file.txt
 # MD5 (file.txt) = d41d8cd98f00b204e9800998ecf8427e
@@ -87,11 +88,40 @@ md5 file.txt
 # Hashed result is totally differents
 ```
 
-[MD5 Hash Generator](https://www.md5hashgenerator.com/)
+[MD5 Hash Generator](https://passwordsgenerator.net/md5-hash-generator/)
 
 Generate Hash with text "Hello world" \
 -> 3e25960a79dbc69b674cd4ec67a72c62 (Exactly same)
 
 > It generated based on content
+
+### 16. SHA hashing algorithm and HMAC overview
+
+```sh
+# SHA-1 Hash: 160 bit
+# 4 bit(16, hexadecimal) * 40 characters
+# "Hello world"
+shasum file.txt
+7b502c3a1f48c8609ae212cdfb639dee39673f5e  file.txt
+
+# SHA-256 : 256 bit
+# 4 bit(16, hexadecimal) * 64 characters
+# "Hello world"
+shasum -a 256 file.txt
+64ec88ca00b268e5ba1a35678a1b5316d212f4f366b2477232534a8aeca37f3c  file.txt
+
+# SHA-512 : 512 bit
+# 4 bit(16, hexadecimal) * 128 characters
+# "Hello world"
+shasum -a 512 file.txt
+b7f783baed8297f0db917462184ff4f08e69c2d5e5f79a942600f9725f58ce1f29c18139bf80b06c0fff2bdd34738452ecf40c488c22a7e3d80cdf6f9c1c0d47  file.txt
+
+# SHA-512 : 512 bit
+# 4 bit(16, hexadecimal) * 128 characters
+# "H" -> "h", "hello world"
+open file.txt
+shasum -a 512 file.txt
+309ecc489c12d6eb4cc40f50c902f2b4d0ed77ee511a7c7a9bcd3ca86d4cd86f989dd35bc5ff499670da34255b45b0cfd830e81f605dcf7dc5542e93ae9cd76f  file.txt
+```
 
 </details>
