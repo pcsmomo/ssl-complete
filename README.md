@@ -61,4 +61,15 @@ RSA (Rivest–Shamir–Adleman) : Asymmetric
 
 DES, 3DES : Obsolete
 
+### 14. Hashing Overview
+
+Bashing Algorithms
+
+- MD5 (message-digest) : 128 bit
+- SHA (Secure Hash Algorithm)
+  - SHA-1 : 160 bit
+  - SHA-256 : 256 bit
+  - SHA-512 : 512 bit
+- HMAC (keyed-hash message authentication code) : Can be used with MD5 and SHA
+
 </details>
