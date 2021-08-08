@@ -219,4 +219,12 @@ genrsa 4096
 
 keychain access > System Roots > All certificated shipped on MacOS
 
+### 30. How Chain of Trust is built
+
+1. Root CA (Certificate Authority) : Selt-signed certificate
+2. Intermediate CA : Signed by Root CA
+3. End user : Signed by Intermediate CA
+
+Signature : SHA hash with RSA Encryption
+
 </details>
