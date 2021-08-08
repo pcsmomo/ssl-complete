@@ -6,7 +6,7 @@ SSL : Secure Sockets Layer
 
 ## details
 
-<details>
+<details open>
   <summary>Click to Contract/Expend</summary>
 
 ### 7. Analyzing traffic using Wireshark
@@ -239,5 +239,12 @@ Signature : SHA hash with RSA Encryption
 3. Root CA
    1. Varification of the signature
       - Owner Info in Root CA within OS' keychain access
+
+### 32. Verifying SSL certificate and certificates chain
+
+[Geocerts SSL : SSL Checker](https://www.geocerts.com/ssl-checker)
+
+Google Search : verify ssl certificate \
+There are many websites where verify ssl certificates
 
 </details>
