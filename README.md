@@ -227,4 +227,17 @@ keychain access > System Roots > All certificated shipped on MacOS
 
 Signature : SHA hash with RSA Encryption
 
+### 31. Verifying chain of certificates
+
+1. Start with End user
+   1. Check current date and time fall within the certificate validity interval
+   2. Varification of the signature
+      - Issuer Info in End user = Owner Info in Intermediate CA
+2. Intermedicate CA
+   1. Varification of the signature
+      - Issuer Info in Intermediate CA = Owner Info in Root CA
+3. Root CA
+   1. Varification of the signature
+      - Owner Info in Root CA within OS' keychain access
+
 </details>
