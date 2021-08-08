@@ -215,4 +215,8 @@ OpenSSL> rsa -in private.pem -outform PEM -pubout -out public.pem
 genrsa 4096
 ```
 
+### 29. Root CA and root certificates in the OS
+
+keychain access > System Roots > All certificated shipped on MacOS
+
 </details>
