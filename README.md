@@ -247,4 +247,14 @@ Signature : SHA hash with RSA Encryption
 Google Search : verify ssl certificate \
 There are many websites where verify ssl certificates
 
+### 39. How TLS session is established
+
+Between Web Browser and Web Server
+
+1. Both sides : Negotiate Cipher Suite
+2. Both sides : SSL/TLS Certificate
+3. Web Browser : Verify Server Certificate
+4. Both sides : Generate symmetric key for data encryption
+5. Both sides : Send/Receive encrypted data
+
 </details>
