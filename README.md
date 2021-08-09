@@ -257,4 +257,28 @@ Between Web Browser and Web Server
 4. Both sides : Generate symmetric key for data encryption
 5. Both sides : Send/Receive encrypted data
 
+### 40. Analyzing TLS session setup using Wireshark
+
+Open Wireshark and connect www.wikipedia.com
+
+**Filtering on Wireshark**\
+`ip.addr == 103.102.166.224`
+
+1. Look at the first TLSv1.3 > Cipher Suite
+   - Web server will choose one of this Cipher Suites
+   ```sh
+   Cipher Suites (16 suites)
+   Cipher Suite: TLS_AES_128_GCM_SHA256 (0x1301)
+   Cipher Suite: TLS_AES_256_GCM_SHA384 (0x1302)
+   Cipher Suite: TLS_CHACHA20_POLY1305_SHA256 (0x1303)
+   ...
+   Cipher Suite: TLS_RSA_WITH_AES_256_CBC_SHA (0x0035)
+   ```
+2. TLSv1.3 with Server Hello
+   - Cipher Suite: TLS_AES_256_GCM_SHA384 (0x1302)
+3. Keep following TLSv1.3
+   1. Certificate Status
+   2. Client Key Exchange
+   3. Application Data
+
 </details>
