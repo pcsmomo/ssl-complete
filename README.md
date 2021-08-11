@@ -285,4 +285,9 @@ Open Wireshark and connect www.wikipedia.com
 
 [Create Github Page](https://pages.github.com/)
 
+### 63. Setting up free hosting
+
+Network Preferences -> Wi-Fi -> Advanced -> DNS \
+-> Add 8.8.8.8 : Google DNS Server
+
 </details>
